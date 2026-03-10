@@ -485,7 +485,8 @@ services:
         apt-get update && apt-get install -y wget tar
         rm -rf /home/deno/functions/*
         cd /home/deno/functions
-        wget -qO- https://github.com/karanjadounaix/supabase-docker/archive/refs/heads/main.tar.gz | tar xz --strip-components=4 supabase-docker-main/docker/volumes/functions/
+        # CHANGED: Now downloads from supabase-docker-joy repo
+        wget -qO- https://github.com/karanjadounaix/supabase-docker-joy/archive/refs/heads/main.tar.gz | tar xz --strip-components=4 supabase-docker-joy-main/docker/volumes/functions/
         echo "Functions downloaded:"
         ls -la /home/deno/functions/
         ls -la /home/deno/functions/main/ || echo "main folder not found"
